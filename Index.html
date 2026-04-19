@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="Index.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Adam Moloney | iPHD </title>
+</head>
+
+<body>
+
+<header>
+    <h1> Adam Moloney </h1>
+    <p> iPhD Candidate</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research Chapters </a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<section id="about">
+<h2>About</h2>
+<p>
+I am a postdoctoral researcher investigating the economics of silage production when Northern Australia is within drought.
+</p>
+</section>
+
+  <section id="research">
+    <h2>Research Chapters</h2>
+
+    <article>
+      <h3>Chapter 1 </h3>
+      <p>
+      What impacts have historical weather events in the Northern Territory/Northern Australia had on cattle sales, domestic market prices and imports and exports of cattle and cattle products in the international beef cattle sector?      </p> 
+      </article>
+
+    <article>
+      <h4>Chapter 2 </h4>
+      <p>
+      What feeding strategies, including prioritization of cattle developmental stages, silage economics, supplementary nutrients, and herd management practices, enable silage-producing farms to maintain cattle productivity and economic viability during drought conditions?
+      </p>
+    </article>
+
+    <article>
+      <h5>Chapter 3 </h5>
+      <p>
+      Which cattle developmental stage achieves the best production performance and economic outcomes under simulated drought feeding conditions, and how does this affect greenhouse gas emissions?
+      </p> 
+      </article>
+
+    <article>
+      <h6>Chapter 4 </h6>
+      <p>
+      What are the characteristics of Northern Territory cattle producers during drought, and what drought management strategies such as feeding, livestock sales, and purchasing decisions are currently in place?      </p>
+    </article>
+
+</section>
+
+<section id="skills">
+<h2>Skills & Expertise</h2>
+<ul>
+<li>Historical Data Analysis</li>
+<li>Development of research methods</li>
+<li>Quantitative data analysis</li>
+<li>Economic Analysis</li>
+<li>Research Publication</li>
+<li>Communication between Industry and Producers</li>
+</ul>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+
+<p>If you would like to discuss potential collaborations or learn more about my
+      research, please get in touch using the form below.</p>
+
+<!-- ✅ ADD ID HERE -->
+<form id="contactForm">
+
+<div>
+<label for="name">Name</label><br>
+<input type="text" id="name" name="name" required>
+</div>
+
+<div>
+<label for="email">Email</label><br>
+<input type="email" id="email" name="email" required>
+</div>
+
+<div>
+<label for="message">Message</label><br>
+<textarea id="message" name="message" rows="5" required></textarea>
+</div>
+
+<div>
+<button type="submit">Send message</button>
+</div>
+
+</form>
+
+<!-- ✅ THIS IS THE MESSAGE OUTPUT -->
+<p id="formFeedback"></p>
+
+</section>
+
+</main>
+
+<footer>
+<p>© 2026 Adam Moloney</p>
+</footer>
+
+<!-- ✅ JAVASCRIPT GOES HERE -->
+<script>
+function setupFormConfirmation() {
+  const form = document.querySelector("#contactForm");
+  const feedback = document.querySelector("#formFeedback");
+  if (!form || !feedback) return;
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    feedback.textContent = "✅ Thanks — your message has been recorded (demo only).";
+    feedback.style.color = "green";
+
+    form.reset();
+  });
+}
+
+setupFormConfirmation();
+</script>
+
+</body>
+</html>
